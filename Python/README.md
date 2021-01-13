@@ -44,3 +44,45 @@ for key in adict.keys():
 if not adict.has_key(key): 
 for line in afile.readlines(): 
 ```
+### 2.9 Generators
+- iterator를 생성하는 함수. yield를 사용해서 필요할때 마다 연산하는 방식
+- Generator를 필요한 만큼 쓰자
+- 장점: 코드가 간결해진다, 전체를 다 생성하는 list와 비교했을 때 메모리를 적게쓴다
+
+### 2.10 Lambda Functions
+- 한 줄을 넘기지 않으면 사용한다. (60~80자 이내)
+- 장점: 편리하다
+- 단점: 가독성이 떨어지고 해석하기 어렵다. 디버깅이 쉽지 않다.
+
+### 2.13 Properties
+- Property란?
+- set, get method보다는 Property를 사용하는것이 Pythonic한 Code   
+- 장점: 편리하다
+- 단점: 가독성이 떨어지고 해석하기 어렵다. 디버깅이 쉽지 않다.
+
+### 2.14 True/False Evaluations
+- Python에서 암묵적으로 사용하는 true/false표현을 쓰자
+
+
+__[YES]__      
+```python                     
+if not users:
+    print('no users')
+if foo == 0:
+    self.handle_zero()
+if i % 10 == 0:
+    self.handle_multiple_of_ten()
+if not A:
+    print(1)
+```    
+__[NO]__      
+```python
+if len(users) == 0:
+    print('no users')
+if foo is not None and not foo:
+    self.handle_zero()
+if not i % 10:
+    self.handle_multiple_of_ten()
+if A==False:
+    print(1)
+```
